@@ -23,7 +23,7 @@ class EditFishForm extends React.Component {
                 <input type="text"
                        name="price"
                        onChange={this.handleChange}
-                       value={fish.price}/>
+                       value={fish.price} />
                 <select name="status" onChange={this.handleChange} value={fish.status}>
                     <option value="available">Fresh!</option>
                     <option value="unavailable">Sold Out!</option>
@@ -33,6 +33,9 @@ class EditFishForm extends React.Component {
                        name="image"
                        onChange={this.handleChange}
                        value={fish.image} />
+                <button onClick={() => this.props.deleteFish(this.props.index)}>
+                    Remove Fish
+                </button>
             </div>
         );
     }
