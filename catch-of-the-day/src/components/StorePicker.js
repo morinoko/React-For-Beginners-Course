@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
@@ -11,6 +12,10 @@ class StorePicker extends React.Component {
 	// }
 
 	myInput = React.createRef();
+
+	static propTypes = {
+		history: PropTypes.object
+	}
 
 	// Instead of function, make goToStore a property that equals
 	// an arrow function so this is bound to the component instance

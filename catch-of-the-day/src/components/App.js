@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import base from '../base';
 import Header from './Header';
 import Order from './Order';
@@ -13,6 +14,10 @@ class App extends React.Component {
 		fishes: {},
 		order: {}
 	};
+
+	static propTypes = {
+	    match: PropTypes.object
+    }
 
 	componentDidMount() {
 		const { params } = this.props.match;
